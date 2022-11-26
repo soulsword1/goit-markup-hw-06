@@ -20,6 +20,7 @@ body {
   margin: 0;
 
   font-size: 14px;
+  line-height: 1.17;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
   color: var(--body-color);
@@ -240,7 +241,6 @@ section.hero {
 
 .about .text {
   width: 270px;
-  line-height: 1.71;
 }
 
 .about .title {
@@ -396,7 +396,7 @@ section.hero {
 
 footer .contacts-link {
   font-style: normal;
-  line-height: 1.7;
+  line-height: 1.71;
   color: var(--white-color);
   opacity: 0.6;
 }
@@ -407,7 +407,6 @@ footer .logo-link {
 
 .address {
   font-style: normal;
-  line-height: 1.71;
   color: var(--white-color);
 }
 
@@ -437,6 +436,45 @@ footer .logo-link {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--white-color);
+}
+
+.footer-subscribe{
+  margin-left: 93px;
+}
+
+.subscribe-input{
+  padding-left: 16px;
+  width: 358px;
+  height: 50px;
+
+  background: var(--sub-background);
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscribe-btn{
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+
+  margin-left: 12px;
+  padding: 10px 28px;
+  cursor: pointer;
+  background: var(--active-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+}
+
+.btn-icon{
+  margin-left: 10px;
 }
 
 address .contacts-link {
@@ -610,8 +648,8 @@ address .item:not(:last-child) {
   top: 50%;
   left: 50%;
 
-  width: 581px;
-  height: 528px;
+  width: 528px;
+  min-height: 581px;
 
   background: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -639,4 +677,149 @@ address .item:not(:last-child) {
 .modal-svg {
   width: 11px;
   height: 11px;
+}
+
+.modal-btn:hover .modal-svg,
+.modal-btn:focus .modal-svg{
+  fill: var(--active-color);
+}
+
+.order-form{
+  padding: 40px;
+}
+
+.order-title{
+  margin-bottom: 12px;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+color: var(--sub-color);
+}
+
+.order-label{
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+line-height: 1.16;
+letter-spacing: 0.01em;
+color: var(--body-color);
+}
+
+.order-input{
+  width: 100%;
+height: 40px;
+
+margin-bottom: 10px;
+padding-left: 42px;
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+
+transition: border 250ms var(--cubic);
+}
+
+.thumb-form{
+  position: relative;
+}
+
+.order-svg{
+  position:absolute;
+  top:40%;
+  left: 14.27px;
+
+  fill: var(--sub-color);
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
+}
+
+.order-input:focus + .order-svg{
+  fill: var(--active-color);
+}
+
+.order-input:focus-within,
+.order-textarea:focus-within{
+  outline: none;
+  border: 1px solid var(--active-color);
+}
+
+.order-textarea{
+  width: 100%;
+height: 120px;
+margin-bottom: 20px;
+padding: 12px 16px;
+
+resize: none;
+letter-spacing: 0.01em;
+color: var(--body-color);
+border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+transition:  border 250ms var(--cubic);
+}
+
+.order-form input[type="checkbox"]{
+  width: 16px;
+  height: 15px;
+  background: var(--sub-color);
+}
+
+.order-conditions{
+  margin-bottom: 30px;
+}
+
+.order-link{
+  color: var(--active-color);
+  margin-left: 4px;
+}
+
+.agreement-label{
+  display: flex;
+  align-items: center;
+  line-height: 1.71;
+}
+
+.agreement-checkbox{
+  position: absolute;
+  visibility: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.agreement-checkbox:checked + .agreement-icon{
+  background-color: var(--active-color);
+  border-color: transparent;
+  background-image: url("../images/check.svg");
+  background-size: contain;
+  background-origin: border;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.agreement-icon{
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8.38px;
+  border: 2px solid var(--sub-color);
+  border-radius: 2px;
+}
+
+.order-btn{
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+
+  cursor: pointer;
+  background: var(--active-color);
+  color: var(--white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  text-align: center;
 }
